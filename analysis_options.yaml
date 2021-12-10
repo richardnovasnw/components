@@ -1,13 +1,22 @@
-# This file configures the analyzer, which statically analyzes Dart code to
-# check for errors, warnings, and lints.
+# Specify analysis options.
 #
-# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
-# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
-# invoked from the command line by running `flutter analyze`.
-
-# The following line activates a set of recommended lints for Flutter apps,
-# packages, and plugins designed to encourage good coding practices.
-include: package:flutter_lints/flutter.yaml
+# Until there are meta linter rules, each desired lint must be explicitly enabled.
+# See: https://github.com/dart-lang/linter/issues/288
+#
+# For a list of lints, see: http://dart-lang.github.io/linter/lints/
+# See the configuration guide for more
+# https://github.com/dart-lang/sdk/tree/main/pkg/analyzer#configuring-the-analyzer
+#
+# There are other similar analysis options files in the flutter repos,
+# which should be kept in sync with this file:
+#
+#   - analysis_options.yaml (this file)
+#   - https://github.com/flutter/plugins/blob/master/analysis_options.yaml
+#   - https://github.com/flutter/engine/blob/master/analysis_options.yaml
+#   - https://github.com/flutter/packages/blob/master/analysis_options.yaml
+#
+# This file contains the analysis options used by Flutter tools, such as IntelliJ,
+# Android Studio, and the `flutter analyze` command.
 
 analyzer:
   strong-mode:
@@ -26,8 +35,12 @@ analyzer:
     # TODO(ianh): https://github.com/flutter/flutter/issues/74381
     # Clean up existing unnecessary imports, and remove line to ignore.
     unnecessary_import: ignore
+    # Turned off until null-safe rollout is complete.
+    unnecessary_null_comparison: ignore
   exclude:
-    - "lib/**/**.g.dart"
+    - "bin/cache/**"
+    # Ignore protoc generated files
+    - "dev/conductor/lib/proto/*"
 
 linter:
   rules:
@@ -226,6 +239,3 @@ linter:
     # - use_to_and_as_if_applicable # has false positives, so we prefer to catch this by code-review
     - valid_regexps
     - void_checks
-
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options
