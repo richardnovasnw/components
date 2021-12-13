@@ -1,4 +1,4 @@
-import 'package:infinet/intl/app_strings.g.dart';
+import 'app_strings.g.dart';
 
 class AppStringsEN extends AppStrings {
   @override

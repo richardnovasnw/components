@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:infinet/core/navigation/navigation.dart';
-import 'package:infinet/ui.dart';
-import 'package:infinet/views/home_page.dart';
-import 'package:infinet/views/navigation/app_navigation_state.dart';
+import '../../core/navigation/navigation.dart';
+import '../../ui.dart';
+import '../home_page.dart';
+import 'app_navigation_state.dart';
 
 class AppNavigationController extends AppFlowController<AppNavigationState> {
   AppNavigationController() : super(AppNavigationState());

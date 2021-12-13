@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:state_notifier/state_notifier.dart';
-import 'package:infinet/ui.dart';
 
 abstract class AppFlowController<T> extends StateNotifier<T> {
   AppFlowController(T state) : super(state);
@@ -19,8 +18,7 @@ class _AppRouteNavigator<T extends AppFlowController<Object>>
   const _AppRouteNavigator({
     Key? key,
     required this.controller,
-  })  : assert(controller != null),
-        super(key: key);
+  }) : super(key: key);
 
   final T controller;
 
@@ -31,7 +29,7 @@ class _AppRouteNavigator<T extends AppFlowController<Object>>
 class _AppRouteNavigatorState<T extends AppFlowController<Object>>
     extends State<_AppRouteNavigator<T>> {
   // ignore: always_specify_types
-  List<Page> _pages = [];
+  List<Page<Object>> _pages = [];
   bool _didPop = false;
 
   final List<Object> _history = <Object>[];
@@ -42,9 +40,7 @@ class _AppRouteNavigatorState<T extends AppFlowController<Object>>
     _removeListener = widget.controller.addListener(_listen);
     _pages = widget.controller.onGeneratePages(
       widget.controller._state,
-      List<Page<Object>>.of(
-        _pages as Iterable<Page<Object>>? ?? <Page<Object>>[],
-      ),
+      List<Page<Object>>.of(_pages),
     );
     _history.add(widget.controller._state);
   }
@@ -68,7 +64,7 @@ class _AppRouteNavigatorState<T extends AppFlowController<Object>>
     setState(() {
       _pages = widget.controller
           // ignore: always_specify_types
-          .onGeneratePages(state, List.of(_pages as Iterable<Page<Object>>));
+          .onGeneratePages(state, List.of(_pages));
       _history.add(state);
     });
   }

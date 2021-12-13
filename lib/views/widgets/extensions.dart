@@ -4,7 +4,8 @@ import 'package:built_collection/built_collection.dart';
 import 'package:collection/collection.dart' as collection;
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:infinet/intl/i18n.dart';
+
+import '../../intl/i18n.dart';
 
 extension NumberUtils on num {
   static const int _width = 375; // reference width from designs

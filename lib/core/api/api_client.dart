@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart';
 import 'package:http/io_client.dart';
-import 'package:infinet/shared.dart';
+import '../../shared.dart';
 
 extension ResponseUtils on Response {
   bool get isSuccess {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:infinet/views/widgets/extensions.dart';
+import 'extensions.dart';
 
 class AppTitle extends StatelessWidget {
   const AppTitle(this.text, {Key? key, this.style}) : super(key: key);

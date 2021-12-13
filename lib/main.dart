@@ -1,9 +1,9 @@
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
-import 'package:infinet/core/navigation/navigation.dart';
-import 'package:infinet/ui.dart';
-import 'package:infinet/view_model/app_view_model.dart';
-import 'package:infinet/views/navigation/app_navigation_controller.dart';
-import 'package:infinet/views/navigation/app_navigation_state.dart';
+import 'core/navigation/navigation.dart';
+import 'ui.dart';
+import 'view_model/app_view_model.dart';
+import 'views/navigation/app_navigation_controller.dart';
+import 'views/navigation/app_navigation_state.dart';
 
 void main() {
   runApp(
@@ -20,7 +20,7 @@ class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {

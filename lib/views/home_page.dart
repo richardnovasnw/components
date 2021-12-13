@@ -1,4 +1,5 @@
-import 'package:infinet/ui.dart';
+import '../ui.dart';
+import 'widgets/recent_activity_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, this.title}) : super(key: key);
@@ -6,28 +7,21 @@ class HomePage extends StatefulWidget {
   final String? title;
 
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> with AppProviderMixin<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text(widget.title ?? ''),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '${appState.count}',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+          children: const <Widget>[RecentActivityCard()],
         ),
       ),
       floatingActionButton: FloatingActionButton(

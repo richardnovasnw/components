@@ -4,8 +4,8 @@ import 'package:collection/collection.dart' show IterableExtension;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:infinet/intl/app_strings.g.dart';
-import 'package:infinet/intl/app_strings_en.g.dart';
+import 'app_strings.g.dart';
+import 'app_strings_en.g.dart';
 
 export 'package:infinet/intl/app_strings.g.dart';
 

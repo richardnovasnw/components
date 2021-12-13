@@ -1,9 +1,9 @@
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:state_notifier/state_notifier.dart';
-import 'package:infinet/core/view_model/view_model.dart';
-import 'package:infinet/model/app_state.dart';
-import 'package:infinet/provider/app_state_notifier.dart';
-import 'package:infinet/ui.dart';
+import '../core/view_model/view_model.dart';
+import '../model/app_state.dart';
+import '../provider/app_state_notifier.dart';
+import '../ui.dart';
 
 class AppProvider extends StatelessWidget {
   const AppProvider({Key? key, this.child}) : super(key: key);

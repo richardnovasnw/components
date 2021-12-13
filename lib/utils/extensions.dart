@@ -1,4 +1,4 @@
-import 'package:infinet/shared.dart';
+import '../shared.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class _AppAssets extends AppAssets {
