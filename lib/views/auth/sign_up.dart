@@ -1,4 +1,5 @@
 import 'package:infinet/ui.dart';
+import 'package:infinet/views/auth/brand_verification.dart';
 import 'package:infinet/views/widgets/app_check_box.dart';
 import 'package:infinet/views/widgets/app_logo.dart';
 import 'package:infinet/views/widgets/app_outline_button.dart';
@@ -133,7 +134,22 @@ class SignUp extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: AppOutlineButton(onPressed: (){}, child: Text('Create Account',style: TextStyle(color: Colors.white
+                  child: AppOutlineButton(onPressed: (){
+                     showModalBottomSheet<void>(
+                       context: context,
+                      enableDrag: true,
+                      isScrollControlled: true,
+                      backgroundColor: Colors.black.withOpacity(0.5),
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.vertical(
+                          top: Radius.circular(24),
+                        ),
+                      ),
+                      builder: (BuildContext context) {
+                        return BrandVerification();
+                      },
+                    );
+                  }, child: Text('Create Account',style: TextStyle(color: Colors.white
                   ),)),
                 )
 
