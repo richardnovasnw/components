@@ -12,7 +12,7 @@ class RagePrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GradientButton(
         shapeRadius: BorderRadius.circular(8),
-        increaseWidthBy: 120,
+        increaseWidthBy: 260,
         increaseHeightBy: 20,
         gradient: const LinearGradient(
             colors: <Color>[Colors.purple, Colors.deepPurple],
