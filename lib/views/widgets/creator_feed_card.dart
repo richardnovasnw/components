@@ -29,7 +29,6 @@ class CreatorFeedCard extends StatelessWidget {
                   color: Colors.black87,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       const SizedBox(
                         height: 24,

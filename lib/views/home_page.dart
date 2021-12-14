@@ -1,3 +1,5 @@
+import 'package:infinet/views/widgets/payments_processing.dart';
+
 import '../ui.dart';
 import 'widgets/recent_activity_card.dart';
 
@@ -21,7 +23,7 @@ class _HomePageState extends State<HomePage> with AppProviderMixin<HomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[RecentActivityCard()],
+          children: const <Widget>[PaymentProcessing()],
         ),
       ),
       floatingActionButton: FloatingActionButton(
