@@ -2,12 +2,12 @@ import '../../ui.dart';
 import 'gradient_input_border.dart';
 
 class AppTextFormField extends StatelessWidget {
-  const AppTextFormField({Key? key}) : super(key: key);
-
+  const AppTextFormField({Key? key,required this.hintText}) : super(key: key);
+  final String? hintText;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-        decoration: const InputDecoration(
+        decoration:  InputDecoration(
             fillColor: Colors.black38,
             filled: true,
             border: GradientOutlineInputBorder(
@@ -20,6 +20,10 @@ class AppTextFormField extends StatelessWidget {
                   colors: <Color>[Colors.purple, Colors.deepPurple],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight),
-            )));
+            ),
+hintText:hintText,
+          hintStyle: TextStyle(color: Colors.white)
+        ),
+    );
   }
 }
