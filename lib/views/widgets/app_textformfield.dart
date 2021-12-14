@@ -7,19 +7,13 @@ class AppTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-        decoration: const InputDecoration(
+        decoration: InputDecoration(
             fillColor: Colors.black38,
             filled: true,
             border: GradientOutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(16.0)),
-              focusedGradient: LinearGradient(
-                  colors: <Color>[Colors.purple, Colors.deepPurple],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight),
-              unfocusedGradient: LinearGradient(
-                  colors: <Color>[Colors.purple, Colors.deepPurple],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight),
+              borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+              focusedGradient: colors.purpleDeepPurple,
+              unfocusedGradient: colors.purpleDeepPurple,
             )));
   }
 }
