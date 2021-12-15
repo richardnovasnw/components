@@ -21,7 +21,7 @@ class PaymentSuccessPop extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                'Payment Successful',
+                context.strings.paymentSuccessful,
                 style: context.primaryTextTheme.headline5,
               ),
               const Icon(
@@ -40,7 +40,7 @@ class PaymentSuccessPop extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: GradientText(
-                  'Your payment was success',
+                  context.strings.yourPaymentWasSuccess,
                   style: const TextStyle(
                       fontSize: 20, fontWeight: FontWeight.bold),
                   gradient: colors.purpleDeepPurple,
@@ -50,7 +50,7 @@ class PaymentSuccessPop extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   GradientText(
-                    'Payment ID',
+                    context.strings.paymentID,
                     style: context.primaryTextTheme.bodyText1!,
                     gradient: colors.purpleDeepPurple,
                   ),
@@ -76,7 +76,7 @@ class PaymentSuccessPop extends StatelessWidget {
               width: context.mediaSize.width,
               onPressed: () {},
               child: Text(
-                'Back to home',
+                context.strings.backToHome,
                 style: context.primaryTextTheme.headline6,
               )),
         ],

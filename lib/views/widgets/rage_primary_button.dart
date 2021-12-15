@@ -20,11 +20,9 @@ class RagePrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GradientButton(
         shapeRadius: BorderRadius.circular(8),
-
-        increaseWidthBy: width ?? 120,
+        increaseWidthBy: width ?? context.mediaSize.width,
         increaseHeightBy: height ?? 20,
         gradient: gradient ?? colors.purpleDeepPurple,
-
         callback: onPressed,
         child: child);
   }

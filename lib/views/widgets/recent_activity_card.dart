@@ -14,9 +14,9 @@ class RecentActivityCard extends StatelessWidget {
               gradient: colors.purpleDeepPurple),
         ),
       ),
-      title: const Text(
-        'Collected From David',
-        style: TextStyle(
+      title: Text(
+        '${context.strings.collectedFrom} David',
+        style: const TextStyle(
             fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white),
       ),
       subtitle: Column(
@@ -29,11 +29,11 @@ class RecentActivityCard extends StatelessWidget {
               style: context.primaryTextTheme.caption,
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 8.0),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
             child: Text(
-              'Purchased for 1.50 ETH',
-              style: TextStyle(
+              '${context.strings.purchasedFor} 1.50 ${context.strings.eth}',
+              style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),

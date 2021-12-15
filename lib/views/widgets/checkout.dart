@@ -20,7 +20,7 @@ class Checkout extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                'Checkout',
+                context.strings.checkout,
                 style: context.primaryTextTheme.headline5,
               ),
               const Icon(
@@ -57,7 +57,7 @@ class Checkout extends StatelessWidget {
                               ?.copyWith(fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          '1.05 MATIC sent',
+                          '1.05 ${context.strings.maticSent}',
                           style: context.primaryTextTheme.bodyText1,
                         ),
                         Padding(
@@ -86,21 +86,21 @@ class Checkout extends StatelessWidget {
           SizedBox(
             width: 279,
             child: Column(
-              children: const <Widget>[
-                CheckoutTextRow(
+              children: <Widget>[
+                const CheckoutTextRow(
                   text: '1.005',
                   eth: '',
                 ),
                 CheckoutTextRow(
-                  text: 'Your balance',
+                  text: context.strings.yourBalance,
                   eth: '8.498',
                 ),
                 CheckoutTextRow(
-                  text: 'Service fee',
+                  text: context.strings.serviceFee,
                   eth: '0',
                 ),
                 CheckoutTextRow(
-                  text: 'You will pay',
+                  text: context.strings.youWillPay,
                   eth: '0.007',
                 ),
               ],
@@ -111,12 +111,12 @@ class Checkout extends StatelessWidget {
               RagePrimaryButton(
                 onPressed: () {},
                 width: context.mediaSize.width,
-                child: const Text('Check out'),
+                child: Text(context.strings.checkOut),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.0),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: RageOutlinedButton(
-                  child: Text('Cancel'),
+                  child: Text(context.strings.cancel),
                 ),
               ),
             ],
@@ -148,7 +148,7 @@ class CheckoutTextRow extends StatelessWidget {
                 ?.copyWith(fontWeight: FontWeight.bold),
           ),
           Text(
-            '$eth ETH',
+            '$eth ${context.strings.eth}',
             style: context.primaryTextTheme.bodyText1
                 ?.copyWith(fontWeight: FontWeight.bold),
           ),
