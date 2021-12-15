@@ -63,15 +63,16 @@ class DropFeedCard extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          const Text(
-                            'Geo-Point Sprint',
-                            style: TextStyle(fontSize: 14, color: Colors.white),
+                          Text(
+                            context.strings.geoPointSprint,
+                            style: const TextStyle(
+                                fontSize: 14, color: Colors.white),
                           ),
                           RichText(
-                            text: const TextSpan(
-                                text: '1.00 ETH',
-                                style: TextStyle(fontSize: 16),
-                                children: <InlineSpan>[
+                            text: TextSpan(
+                                text: '1.00 ${context.strings.eth}',
+                                style: const TextStyle(fontSize: 16),
+                                children: const <InlineSpan>[
                                   TextSpan(
                                     text: ' \$2.3435.32',
                                     style: TextStyle(fontSize: 13),

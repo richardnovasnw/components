@@ -72,12 +72,12 @@ class UserFeedCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Text(
-                    'Sold For',
+                    context.strings.soldFor,
                     style: context.primaryTextTheme.headline6,
                   ),
-                  const Text(
-                    '200  MATIC',
-                    style: TextStyle(
+                  Text(
+                    '200  ${context.strings.matic}',
+                    style: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),

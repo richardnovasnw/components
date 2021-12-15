@@ -19,7 +19,7 @@ class PaymentProcessing extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                'Processing',
+                context.strings.processing,
                 style: context.primaryTextTheme.headline5,
               ),
               const Icon(
@@ -38,14 +38,14 @@ class PaymentProcessing extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: GradientText(
-                  'Purchasing',
+                  context.strings.purchasing,
                   style: const TextStyle(
                       fontSize: 20, fontWeight: FontWeight.bold),
                   gradient: colors.purpleDeepPurple,
                 ),
               ),
               GradientText(
-                'Your payment is processing...',
+                context.strings.yourPaymentIsProcessing,
                 style: context.primaryTextTheme.bodyText1!,
                 gradient: colors.purpleDeepPurple,
               ),
@@ -58,24 +58,24 @@ class PaymentProcessing extends StatelessWidget {
                 width: context.mediaSize.width,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const <Widget>[
-                    SizedBox(
+                  children: <Widget>[
+                    const SizedBox(
                         height: 20,
                         width: 20,
                         child: CircularProgressIndicator(
                           color: Colors.white,
                         )),
                     Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Processing'),
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(context.strings.processing),
                     ),
                   ],
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 16.0),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: RageOutlinedButton(
-                  child: Text('Cancel'),
+                  child: Text(context.strings.cancel),
                 ),
               ),
             ],

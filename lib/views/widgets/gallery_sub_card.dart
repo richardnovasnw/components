@@ -25,11 +25,12 @@ class GallerySubCard extends StatelessWidget {
                           'https://image.shutterstock.com/image-photo/old-brick-black-color-wall-260nw-1605128917.jpg'),
                       fit: BoxFit.fill)),
             ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Text(
-                'Gallery',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                context.strings.gallery,
+                style:
+                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             )
           ],

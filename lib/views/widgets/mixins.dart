@@ -88,7 +88,7 @@ mixin FutureMixin<S extends StatefulWidget, T> on State<S> {
   ) {
     return ElevatedButton(
       onPressed: refresh,
-      child: Text(context.strings!.retry),
+      child: Text(context.strings.retry),
     );
   }
 

@@ -118,7 +118,7 @@ extension BuildContextUtils on BuildContext {
 
   IconThemeData get iconTheme => IconTheme.of(this);
 
-  AppStrings? get strings => AppLocalizations.of(this);
+  AppStrings get strings => AppLocalizations.of(this)!;
 
   ModalRoute<T>? getModalRoute<T>() => ModalRoute.of<T>(this);
 
