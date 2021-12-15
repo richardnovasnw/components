@@ -1,3 +1,7 @@
+import 'package:infinet/views/widgets/app_check_box.dart';
+import 'package:infinet/views/widgets/avatar_name.dart';
+import 'package:infinet/views/widgets/chain.dart';
+
 import '../ui.dart';
 import 'widgets/recent_activity_card.dart';
 
@@ -21,7 +25,13 @@ class _HomePageState extends State<HomePage> with AppProviderMixin<HomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[RecentActivityCard()],
+          children: const <Widget>[
+            AvatarName(),
+            AvatarNameHoriz(),
+            AvatarNameStatus(),
+            ChainTile(),
+            AppRoundedCheckBox(text: Text('hello',style: TextStyle(color: Colors.white),))
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(

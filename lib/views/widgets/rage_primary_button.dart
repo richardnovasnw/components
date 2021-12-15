@@ -3,17 +3,19 @@ import 'package:gradient_widgets/gradient_widgets.dart';
 
 class RagePrimaryButton extends StatelessWidget {
   const RagePrimaryButton(
-      {Key? key, required this.onPressed, required this.child})
+      {Key? key, required this.onPressed, required this.child, this.height=20, this.width=260})
       : super(key: key);
   final Function() onPressed;
   final Widget child;
+  final double height;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
     return GradientButton(
         shapeRadius: BorderRadius.circular(8),
-        increaseWidthBy: 260,
-        increaseHeightBy: 20,
+        increaseWidthBy: width,
+        increaseHeightBy: height,
         gradient: const LinearGradient(
             colors: <Color>[Colors.purple, Colors.deepPurple],
             begin: Alignment.topLeft,
