@@ -7,13 +7,14 @@ class AppContainer extends StatelessWidget {
     required this.gradient,
     required this.child,
     required this.width,
-    this.padding,
+    this.padding, this.borderRadius,
   }) : super(key: key);
   final double height;
   final double width;
   final LinearGradient gradient;
   final Widget child;
   final double? padding;
+  final double? borderRadius;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +22,7 @@ class AppContainer extends StatelessWidget {
       width: width,
       padding: EdgeInsets.all(padding ?? 16),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(24), gradient: gradient),
+          borderRadius: BorderRadius.circular(borderRadius??24), gradient: gradient),
       child: child,
     );
   }

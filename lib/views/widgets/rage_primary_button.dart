@@ -66,8 +66,10 @@ class RageOutlinedButton extends StatelessWidget {
   const RageOutlinedButton({
     Key? key,
     required this.child,
+    this.width,
   }) : super(key: key);
   final Widget child;
+  final double? width;
   @override
   Widget build(BuildContext context) {
     return GradientBorderContainer(
@@ -79,7 +81,7 @@ class RageOutlinedButton extends StatelessWidget {
       child: RagePrimaryButton(
         gradient:
             const LinearGradient(colors: <Color>[Colors.black12, Colors.black]),
-        width: context.mediaSize.width,
+        width: width ?? context.mediaSize.width,
         onPressed: () {},
         child: child,
       ),
