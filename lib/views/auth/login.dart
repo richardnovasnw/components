@@ -47,7 +47,9 @@ class LoginPage extends StatelessWidget {
                   Text('Log-in to your account or sign-up.',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: RagePrimaryButton(onPressed: (){}, child: Text('Log-In')),
+                    child: RagePrimaryButton(onPressed: (){
+                      context.appViewModel.signIn(email: 'shra131295@gmail.com', password: '12345678');
+                    }, child: Text('Log-In')),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),

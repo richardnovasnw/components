@@ -1,5 +1,7 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
+import 'package:infinet/model/users.dart';
 import 'serializers.dart';
 
 part 'app_state.g.dart';
@@ -24,6 +26,6 @@ abstract class AppState implements Built<AppState, AppStateBuilder> {
     b.count = 0;
   }
 
-  @nullable
   int? get count;
+  Users? get user;
 }

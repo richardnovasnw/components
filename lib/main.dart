@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'core/navigation/navigation.dart';
 import 'ui.dart';
@@ -5,7 +6,10 @@ import 'view_model/app_view_model.dart';
 import 'views/navigation/app_navigation_controller.dart';
 import 'views/navigation/app_navigation_state.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(
     AppProvider(
       child: StateNotifierProvider<AppNavigationController, AppNavigationState>(
