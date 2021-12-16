@@ -137,20 +137,21 @@ class SignUp extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
 
                   child: AppOutlineButton(onPressed: (){
-                     showModalBottomSheet<void>(
-                       context: context,
-                      enableDrag: true,
-                      isScrollControlled: true,
-                      backgroundColor: Colors.black.withOpacity(0.5),
-                      shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.vertical(
-                          top: Radius.circular(24),
-                        ),
-                      ),
-                      builder: (BuildContext context) {
-                        return BrandVerification();
-                      },
-                    );
+                    context.appViewModel.signUp(userName: 'Shravani', email: 'shra131295@gmail.com', password: '12345678');
+                    //  showModalBottomSheet<void>(
+                    //    context: context,
+                    //   enableDrag: true,
+                    //   isScrollControlled: true,
+                    //   backgroundColor: Colors.black.withOpacity(0.5),
+                    //   shape: const RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.vertical(
+                    //       top: Radius.circular(24),
+                    //     ),
+                    //   ),
+                    //   builder: (BuildContext context) {
+                    //     return BrandVerification();
+                    //   },
+                    // );
                   }, child: Text('Create Account',style: TextStyle(color: Colors.white
 
                   ),)),
