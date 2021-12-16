@@ -45,14 +45,10 @@ class DropFeedCard extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(27)),
-                                minimumSize: const Size(65, 28),
-                                primary: Colors.transparent,
-                                side: const BorderSide(color: Colors.white),
-                              ),
+                          RageOutlinedButton(
+                              width: 65,
+                              height: 28,
+                              borderRadius: 27,
                               onPressed: () {},
                               child: const Text(
                                 '#color',

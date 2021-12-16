@@ -1,7 +1,12 @@
+import 'package:infinet/views/widgets/Latest_drop_swipe.dart';
+import 'package:infinet/views/widgets/app_card_tile.dart';
+import 'package:infinet/views/widgets/footer.dart';
+import 'package:infinet/views/widgets/profile_collection.dart';
 import 'package:infinet/views/widgets/select_date.dart';
 
 import '../ui.dart';
 import 'widgets/add_tag_module.dart';
+import 'widgets/app_category_tile.dart';
 import 'widgets/profile_contact_popup.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,11 +26,8 @@ class _HomePageState extends State<HomePage> with AppProviderMixin<HomePage> {
       appBar: AppBar(
         title: Text(widget.title ?? ''),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[SelectDate()],
-        ),
+      body: const Center(
+        child: Footer(),
       ),
     );
   }

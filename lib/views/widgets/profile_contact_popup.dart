@@ -44,14 +44,11 @@ class ProfileContactPopUp extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                    fixedSize: const Size(140, 40),
-                    primary: Colors.transparent,
-                    side: const BorderSide(color: Colors.grey),
-                  ),
+                RageOutlinedButton(
+                  width: 140,
+                  height: 40,
+                  borderRadius: 8,
+                  borderColor: Colors.grey,
                   onPressed: () {},
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,

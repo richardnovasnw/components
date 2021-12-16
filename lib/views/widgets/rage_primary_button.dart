@@ -62,8 +62,8 @@ class RageSecondaryButton extends StatelessWidget {
   }
 }
 
-class RageOutlinedButton extends StatelessWidget {
-  const RageOutlinedButton({
+class RageGradientOutlinedButton extends StatelessWidget {
+  const RageGradientOutlinedButton({
     Key? key,
     required this.child,
     this.width,
@@ -86,5 +86,38 @@ class RageOutlinedButton extends StatelessWidget {
         child: child,
       ),
     );
+  }
+}
+
+class RageOutlinedButton extends StatelessWidget {
+  const RageOutlinedButton(
+      {Key? key,
+      this.height,
+      this.width,
+      this.borderRadius,
+      required this.child,
+      this.padding,
+      required this.onPressed, this.borderColor})
+      : super(key: key);
+  final double? height;
+  final double? width;
+  final double? borderRadius;
+  final double? padding;
+  final Function() onPressed;
+  final Widget child;
+  final Color? borderColor;
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.all(padding ?? 8.0),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(borderRadius ?? 8)),
+          minimumSize: Size(width ?? 108, height ?? 40),
+          primary: Colors.transparent,
+          side:  BorderSide(color:borderColor?? Colors.white),
+        ),
+        onPressed: onPressed,
+        child: child);
   }
 }
