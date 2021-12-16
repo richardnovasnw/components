@@ -10,16 +10,16 @@ class Footer extends StatelessWidget {
       height: 310,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: <Widget>[
           Padding(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: <Widget>[
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const <Widget>[
                       RageTextButton(text: 'Instagram'),
                       RageTextButton(text: 'Twitter'),
                       RageTextButton(text: 'Discord'),
@@ -30,7 +30,7 @@ class Footer extends StatelessWidget {
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const <Widget>[
                       RageTextButton(text: 'About'),
                       RageTextButton(text: 'Community Guildlines'),
                       RageTextButton(text: 'Terms of Service'),
@@ -43,7 +43,7 @@ class Footer extends StatelessWidget {
               ],
             ),
           ),
-          Divider(
+          const Divider(
             color: Colors.white,
           ),
           Padding(

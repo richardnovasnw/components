@@ -9,7 +9,6 @@ class LatestDropSwipe extends StatefulWidget {
 
 class _LatestDropSwipeState extends State<LatestDropSwipe> {
   final PageController _pageController = PageController(
-    initialPage: 0,
     viewportFraction: .68,
   );
   int current = 0;
@@ -39,29 +38,29 @@ class _LatestDropSwipeState extends State<LatestDropSwipe> {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
+      children: <Widget>[
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+            children: <Widget>[
               Text(
                 'Latest Drops',
                 style: context.primaryTextTheme.headline5
                     ?.copyWith(fontWeight: FontWeight.bold),
               ),
               Row(
-                children: [
+                children: <Widget>[
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_back,
                       color: Colors.white,
                     ),
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_forward,
                       color: Colors.white,
                     ),
@@ -75,7 +74,6 @@ class _LatestDropSwipeState extends State<LatestDropSwipe> {
           height: 400,
           child: PageView.builder(
             controller: _pageController,
-            scrollDirection: Axis.horizontal,
             itemCount: n.length,
             itemBuilder: (BuildContext context, int index) {
               final bool active = index == current;
@@ -96,24 +94,24 @@ class _LatestDropSwipeState extends State<LatestDropSwipe> {
       child: AspectRatio(
         aspectRatio: 0.71,
         child: Column(
-          children: [
+          children: <Widget>[
             AppContainer(
               width: 254,
               height: 300,
               borderRadius: 28,
-              image: DecorationImage(
+              image: const DecorationImage(
                   image: NetworkImage(
                       'https://st.depositphotos.com/1010338/3142/i/600/depositphotos_31420279-stock-photo-death-in-the-hood-concept.jpg'),
                   fit: BoxFit.cover),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  AppIcon(
+                children: <Widget>[
+                  const AppIcon(
                     icon: Icons.favorite,
                   ),
                   Row(
-                    children: [
+                    children: <Widget>[
                       Stack(
                         textDirection: TextDirection.ltr,
                         children: <Widget>[
@@ -161,7 +159,7 @@ class _LatestDropSwipeState extends State<LatestDropSwipe> {
               child: ListTile(
                 title: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: <Widget>[
                     Text(
                       'Inside Kings Cross',
                       style: context.primaryTextTheme.subtitle2
@@ -173,7 +171,7 @@ class _LatestDropSwipeState extends State<LatestDropSwipe> {
                         borderRadius: 34,
                         width: 78,
                         height: 32,
-                        child: Text('2.3 ETH')),
+                        child: const Text('2.3 ETH')),
                   ],
                 ),
                 subtitle: Text('Nov 212, 2021',

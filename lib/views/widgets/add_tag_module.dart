@@ -1,6 +1,5 @@
-import 'package:infinet/views/widgets/app_textformfield.dart';
-
 import '../../ui.dart';
+import 'app_textformfield.dart';
 
 class AddTagModule extends StatelessWidget {
   const AddTagModule({Key? key}) : super(key: key);
@@ -31,7 +30,7 @@ class AddTagModule extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: Row(
-            children: <Widget>[
+            children: const <Widget>[
               TagButton(
                 text: '#Fashion',
               ),
@@ -68,15 +67,16 @@ class TagButton extends StatelessWidget {
       padding: const EdgeInsets.all(4.0),
       child: OutlinedButton(
         onPressed: () {},
+        style: ButtonStyle(
+            padding: MaterialStateProperty.all(const EdgeInsets.all(12)),
+            side: MaterialStateProperty.all(
+                const BorderSide(color: Colors.white)),
+            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(27)))),
         child: Text(
           text,
           style: context.primaryTextTheme.button?.copyWith(fontSize: 13),
         ),
-        style: ButtonStyle(
-            padding: MaterialStateProperty.all(EdgeInsets.all(12)),
-            side: MaterialStateProperty.all(BorderSide(color: Colors.white)),
-            shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(27)))),
       ),
     );
   }

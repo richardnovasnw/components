@@ -35,7 +35,8 @@ class AppCircleIcon extends StatelessWidget {
     this.borderWidth,
     required this.icon,
     this.backgroundColor,
-    this.foregroundColor, this.strokeWidth,
+    this.foregroundColor,
+    this.strokeWidth,
   }) : super(key: key);
   final double radius;
   final double? borderWidth;
@@ -47,7 +48,7 @@ class AppCircleIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return GradientBorderContainer(
       strokeWidth: strokeWidth ?? 1,
-      gradient: LinearGradient(colors: [Colors.grey, Colors.grey]),
+      gradient: const LinearGradient(colors: <Color>[Colors.grey, Colors.grey]),
       child: CircleAvatar(
         backgroundColor: backgroundColor ?? Colors.transparent,
         radius: radius,

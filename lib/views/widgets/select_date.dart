@@ -74,7 +74,7 @@ class _SelectDateTextFiels extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          children: <Widget>[
             Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
               child: Text(

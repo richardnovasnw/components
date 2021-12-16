@@ -1,6 +1,5 @@
-import 'package:infinet/views/widgets/app_category_tile.dart';
-
 import '../../ui.dart';
+import 'app_category_tile.dart';
 
 class ProfileCollection extends StatelessWidget {
   const ProfileCollection({Key? key}) : super(key: key);
@@ -8,20 +7,20 @@ class ProfileCollection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       shrinkWrap: true,
-      children: [
+      children: <Widget>[
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 24.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+            children:<Widget> [
               Text(
                 'Collection',
                 style: context.primaryTextTheme.headline5
                     ?.copyWith(fontWeight: FontWeight.bold),
               ),
-              Icon(
+              const Icon(
                 Icons.minimize,
                 color: Colors.white,
               )
@@ -42,19 +41,19 @@ class ProfileCollection extends StatelessWidget {
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
+          children: <Widget>[
             RageOutlinedButton(
               onPressed: () {},
               height: 38,
               width: 165,
-              child: Text('Load more'),
+              child: const Text('Load more'),
             ),
             RageOutlinedButton(
               onPressed: () {},
               height: 32,
               width: 135,
               borderRadius: 34,
-              child: Text('3D Collections'),
+              child: const Text('3D Collections'),
             ),
           ],
         ),
