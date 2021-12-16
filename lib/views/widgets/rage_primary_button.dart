@@ -4,6 +4,7 @@ import '../../ui.dart';
 
 class RagePrimaryButton extends StatelessWidget {
   const RagePrimaryButton(
+
       {Key? key,
       required this.onPressed,
       required this.child,

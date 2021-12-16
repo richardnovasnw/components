@@ -1,3 +1,7 @@
+import 'package:infinet/views/widgets/app_check_box.dart';
+import 'package:infinet/views/widgets/avatar_name.dart';
+import 'package:infinet/views/widgets/chain.dart';
+
 import '../ui.dart';
 import 'widgets/user_feed_card.dart';
 
@@ -21,6 +25,7 @@ class _HomePageState extends State<HomePage> with AppProviderMixin<HomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+
           children: const <Widget>[UserFeedCard()],
         ),
       ),

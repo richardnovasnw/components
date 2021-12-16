@@ -26,7 +26,9 @@ class AppNavigationController extends AppFlowController<AppNavigationState> {
       const MaterialPage<Object>(child: HomePage()),
       if (state.value == null)
         const MaterialPage<Object>(
-          child: _NextPage(),
+
+          child: HomePage(),
+
         ),
     ];
   }
