@@ -1,7 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:infinet/views/auth/app_menu.dart';
-import 'package:infinet/views/auth/login.dart';
-import 'package:infinet/views/auth/sign_up.dart';
 import '../../core/navigation/navigation.dart';
 import '../../ui.dart';
 import '../home_page.dart';
@@ -30,7 +26,9 @@ class AppNavigationController extends AppFlowController<AppNavigationState> {
       const MaterialPage<Object>(child: HomePage()),
       if (state.value == null)
         const MaterialPage<Object>(
+
           child: HomePage(),
+
         ),
     ];
   }

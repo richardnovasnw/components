@@ -29,7 +29,6 @@ class CreatorFeedCard extends StatelessWidget {
                   color: Colors.black87,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       const SizedBox(
                         height: 24,
@@ -50,13 +49,13 @@ class CreatorFeedCard extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           RichText(
-                            text: const TextSpan(
+                            text: TextSpan(
                                 text: '2024',
-                                style: TextStyle(fontSize: 36),
+                                style: const TextStyle(fontSize: 36),
                                 children: <InlineSpan>[
                                   TextSpan(
-                                    text: ' Followers',
-                                    style: TextStyle(fontSize: 16),
+                                    text: ' ${context.strings.followers}',
+                                    style: const TextStyle(fontSize: 16),
                                   ),
                                 ]),
                           ),
@@ -69,7 +68,7 @@ class CreatorFeedCard extends StatelessWidget {
                                 side: const BorderSide(color: Colors.white),
                               ),
                               onPressed: () {},
-                              child: const Text('follow'))
+                              child: Text(context.strings.follow))
                         ],
                       )
                     ],

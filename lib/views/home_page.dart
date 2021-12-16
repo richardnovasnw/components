@@ -3,7 +3,7 @@ import 'package:infinet/views/widgets/avatar_name.dart';
 import 'package:infinet/views/widgets/chain.dart';
 
 import '../ui.dart';
-import 'widgets/recent_activity_card.dart';
+import 'widgets/user_feed_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, this.title}) : super(key: key);
@@ -25,19 +25,9 @@ class _HomePageState extends State<HomePage> with AppProviderMixin<HomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            AvatarName(),
-            AvatarNameHoriz(),
-            AvatarNameStatus(),
-            ChainTile(),
-            AppRoundedCheckBox(text: Text('hello',style: TextStyle(color: Colors.white),))
-          ],
+
+          children: const <Widget>[UserFeedCard()],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => context.navigation.updateUserName(),
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }

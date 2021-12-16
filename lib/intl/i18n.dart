@@ -20,7 +20,7 @@ class AppLocalizations {
     GlobalCupertinoLocalizations.delegate,
   ];
 
-  static const AppStringsDelegate delegate = AppStringsDelegate();
+  static const AppStringsDelegate delegate = AppStringsDelegate.delegate;
 
   static AppStrings? of(BuildContext context) =>
       Localizations.of<AppStrings>(context, AppStrings);
