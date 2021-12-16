@@ -8,7 +8,7 @@ class AppCategoryTile extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
       child: Container(
-        height: 194,
+        height: 200,
         width: 166,
         alignment: Alignment.bottomCenter,
         decoration: const BoxDecoration(
@@ -16,15 +16,18 @@ class AppCategoryTile extends StatelessWidget {
                 image: NetworkImage(
                     'https://st.depositphotos.com/1010338/3142/i/600/depositphotos_31420279-stock-photo-death-in-the-hood-concept.jpg'),
                 fit: BoxFit.cover)),
-        child: Container(
-          alignment: Alignment.center,
-          color: Colors.black54,
-          height: 87,
-          width: 166,
-          child: Text(
-            text,
-            style: const TextStyle(
-                color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+        child: AspectRatio(
+          aspectRatio: 1.93,
+          child: Container(
+            alignment: Alignment.center,
+            color: Colors.black54,
+            child: Text(
+              text,
+              style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
         ),
       ),

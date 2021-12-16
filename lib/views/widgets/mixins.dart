@@ -1,6 +1,6 @@
-import 'package:infinet/ui.dart';
-import 'package:infinet/views/widgets/app_progress_indicator.dart';
-import 'package:infinet/views/widgets/extensions.dart';
+import '../../ui.dart';
+import 'app_progress_indicator.dart';
+import 'extensions.dart';
 
 mixin StateMixin<T extends StatefulWidget> on State<T> {
   GlobalKey<ScaffoldState>? _scaffoldKey;
@@ -88,7 +88,7 @@ mixin FutureMixin<S extends StatefulWidget, T> on State<S> {
   ) {
     return ElevatedButton(
       onPressed: refresh,
-      child: Text(context.strings!.retry),
+      child: Text(context.strings.retry),
     );
   }
 

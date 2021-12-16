@@ -1,15 +1,17 @@
 import '../../ui.dart';
 
 class AppCheckBox extends StatefulWidget {
-  const AppCheckBox({Key? key, required this.text,})
-      : super(key: key);
+  const AppCheckBox({
+    Key? key,
+    required this.text,
+  }) : super(key: key);
   final Widget text;
   @override
   State<AppCheckBox> createState() => _AppCheckBoxState();
 }
 
 class _AppCheckBoxState extends State<AppCheckBox> {
-  bool checkBox=false ;
+  bool checkBox = false;
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +60,7 @@ class _AppRoundedCheckBoxState extends State<AppRoundedCheckBox> {
               setState(() {});
             },
           ),
+
         ),
         widget.text
       ],

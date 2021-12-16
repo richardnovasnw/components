@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../../ui.dart';
 
 class AppCardTile extends StatelessWidget {
   const AppCardTile({Key? key}) : super(key: key);
@@ -41,9 +41,9 @@ class AppCardTile extends StatelessWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const <Widget>[
-                        Text('updated'),
-                        Text('june 4, 2021'),
+                      children: <Widget>[
+                        Text(context.strings.updated),
+                        const Text('june 4, 2021'),
                       ],
                     ),
                     Container(
@@ -55,13 +55,13 @@ class AppCardTile extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: const <Widget>[
+                          children: <Widget>[
                             Text(
-                              'Gallery',
-                              style: TextStyle(
+                              context.strings.gallery,
+                              style: const TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold),
                             ),
-                            Icon(Icons.add)
+                            const Icon(Icons.add)
                           ],
                         ),
                       ),

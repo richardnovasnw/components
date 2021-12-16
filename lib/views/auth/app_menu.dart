@@ -1,8 +1,8 @@
 import 'package:gradient_widgets/gradient_widgets.dart';
-import 'package:infinet/views/widgets/app_logo.dart';
-import 'package:infinet/views/widgets/rage_primary_button.dart';
 
 import '../../ui.dart';
+import '../widgets/app_logo.dart';
+import '../widgets/rage_primary_button.dart';
 
 class AppMenu extends StatelessWidget {
   const AppMenu({Key? key}) : super(key: key);
@@ -14,47 +14,56 @@ class AppMenu extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 32),
-
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              AppLogo(),
+            children: <Widget>[
+              const AppLogo(),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  TextGroup(text: 'About',),
-                  TextGroup(text: 'Forum',),
-                  TextGroup(text: 'Contact',),
-                  TextGroup(text: 'Support',),
+                children: const <Widget>[
+                  TextGroup(
+                    text: 'About',
+                  ),
+                  TextGroup(
+                    text: 'Forum',
+                  ),
+                  TextGroup(
+                    text: 'Contact',
+                  ),
+                  TextGroup(
+                    text: 'Support',
+                  ),
                 ],
               ),
               Column(
-                children: [
-                  GradientText('Discover / Collect /Drop',
-                      gradient: LinearGradient(colors: [Colors.purple,Colors.deepPurple]),
+                children: <Widget>[
+                  GradientText('Discover / Collect / Drop',
+                      gradient: colors.purpleDeepPurple,
+                      style: const TextStyle(fontSize: 18)),
+                  const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      'Geo Located Creative Engagements',
                       style: TextStyle(
-                        fontSize: 18
-                  )),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Text('Geo Located Creative Engagements',style: TextStyle(color: Colors.white,fontSize: 14,fontWeight: FontWeight.bold),),
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                   GradientText('Terms & Conditions',
-                      gradient: LinearGradient(colors: [Colors.purple,Colors.deepPurple]),
-                      style: TextStyle(
-                          fontSize: 14
-                      )),
+                      gradient: colors.purpleDeepPurple,
+                      style: const TextStyle(fontSize: 14)),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: RagePrimaryButton(onPressed: (){}, child: Text('Create Account')),
+                    child: RagePrimaryButton(
+                        onPressed: () {}, child: const Text('Create Account')),
                   )
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const <Widget>[
                   CircleAvatar(
                     radius: 7,
                     backgroundColor: Colors.grey,
@@ -68,8 +77,6 @@ class AppMenu extends StatelessWidget {
                   )
                 ],
               ),
-
-
             ],
           ),
         ),
@@ -80,14 +87,17 @@ class AppMenu extends StatelessWidget {
 
 class TextGroup extends StatelessWidget {
   const TextGroup({
-    Key? key, required this.text,
+    Key? key,
+    required this.text,
   }) : super(key: key);
-final String text;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Text(text,style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 32)),
+      child: Text(text,
+          style: const TextStyle(
+              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 32)),
     );
   }
 }

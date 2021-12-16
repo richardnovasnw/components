@@ -27,3 +27,36 @@ class AppCircleAvatar extends StatelessWidget {
     );
   }
 }
+
+class AppCircleIcon extends StatelessWidget {
+  const AppCircleIcon({
+    Key? key,
+    required this.radius,
+    this.borderWidth,
+    required this.icon,
+    this.backgroundColor,
+    this.foregroundColor,
+    this.strokeWidth,
+  }) : super(key: key);
+  final double radius;
+  final double? borderWidth;
+  final IconData icon;
+  final Color? backgroundColor;
+  final Color? foregroundColor;
+  final double? strokeWidth;
+  @override
+  Widget build(BuildContext context) {
+    return GradientBorderContainer(
+      strokeWidth: strokeWidth ?? 1,
+      gradient: const LinearGradient(colors: <Color>[Colors.grey, Colors.grey]),
+      child: CircleAvatar(
+        backgroundColor: backgroundColor ?? Colors.transparent,
+        radius: radius,
+        child: Icon(
+          icon,
+          color: foregroundColor ?? Colors.grey,
+        ),
+      ),
+    );
+  }
+}

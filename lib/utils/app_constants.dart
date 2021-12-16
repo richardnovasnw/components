@@ -8,4 +8,8 @@ abstract class AppColors {
   final Color secondary = const Color(0xFFF8FCFF);
   final Color lightYellow = const Color(0xFFFFF5C9);
   final Color green = const Color(0xFF009688);
+  final LinearGradient purpleDeepPurple = const LinearGradient(
+      colors: <Color>[Colors.purpleAccent, Colors.deepPurple],
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight);
 }
