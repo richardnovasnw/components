@@ -59,14 +59,7 @@ class CreatorFeedCard extends StatelessWidget {
                                   ),
                                 ]),
                           ),
-                          ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8)),
-                                fixedSize: const Size(108, 40),
-                                primary: Colors.transparent,
-                                side: const BorderSide(color: Colors.white),
-                              ),
+                          RageOutlinedButton(
                               onPressed: () {},
                               child: Text(context.strings.follow))
                         ],

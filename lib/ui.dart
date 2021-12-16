@@ -12,6 +12,7 @@ export 'package:infinet/views/widgets/app_bar.dart';
 export 'package:infinet/views/widgets/app_card.dart';
 export 'package:infinet/views/widgets/app_circle_avatar.dart';
 export 'package:infinet/views/widgets/app_container.dart';
+export 'package:infinet/views/widgets/app_icon.dart';
 export 'package:infinet/views/widgets/app_progress_indicator.dart';
 export 'package:infinet/views/widgets/app_scaffold.dart';
 export 'package:infinet/views/widgets/app_title.dart';

@@ -4,491 +4,491 @@ import 'app_strings.g.dart';
 class AppStringsEN extends AppStrings {
   @override
   String get jan {
-    return 'Jan';
+    return "Jan";
   }
 
   @override
   String get feb {
-    return 'Feb';
+    return "Feb";
   }
 
   @override
   String get mar {
-    return 'Mar';
+    return "Mar";
   }
 
   @override
   String get apr {
-    return 'Apr';
+    return "Apr";
   }
 
   @override
   String get may {
-    return 'May';
+    return "May";
   }
 
   @override
   String get jun {
-    return 'Jun';
+    return "Jun";
   }
 
   @override
   String get jul {
-    return 'Jul';
+    return "Jul";
   }
 
   @override
   String get aug {
-    return 'Aug';
+    return "Aug";
   }
 
   @override
   String get sep {
-    return 'Sep';
+    return "Sep";
   }
 
   @override
   String get oct {
-    return 'Oct';
+    return "Oct";
   }
 
   @override
   String get nov {
-    return 'Nov';
+    return "Nov";
   }
 
   @override
   String get dec {
-    return 'Dec';
+    return "Dec";
   }
 
   @override
   String get sunday {
-    return 'Sunday';
+    return "Sunday";
   }
 
   @override
   String get monday {
-    return 'Monday';
+    return "Monday";
   }
 
   @override
   String get tuesday {
-    return 'Tuesday';
+    return "Tuesday";
   }
 
   @override
   String get wednesday {
-    return 'Wednesday';
+    return "Wednesday";
   }
 
   @override
   String get thursday {
-    return 'Thursday';
+    return "Thursday";
   }
 
   @override
   String get friday {
-    return 'Friday';
+    return "Friday";
   }
 
   @override
   String get saturday {
-    return 'Saturday';
+    return "Saturday";
   }
 
   @override
   String get sun {
-    return 'sun';
+    return "sun";
   }
 
   @override
   String get mon {
-    return 'mon';
+    return "mon";
   }
 
   @override
   String get tue {
-    return 'tue';
+    return "tue";
   }
 
   @override
   String get wed {
-    return 'wed';
+    return "wed";
   }
 
   @override
   String get thu {
-    return 'thu';
+    return "thu";
   }
 
   @override
   String get fri {
-    return 'fri';
+    return "fri";
   }
 
   @override
   String get sat {
-    return 'sat';
+    return "sat";
   }
 
   @override
   String get retry {
-    return 'Retry';
+    return "Retry";
   }
 
   @override
   String get iNFineT {
-    return 'iNFineT';
+    return "iNFineT";
   }
 
   @override
   String get _signupPage {
-    return '';
+    return "";
   }
 
   @override
   String get selectWhichTypeOfAccount {
-    return 'Select which type of account you would like to set up';
+    return "Select which type of account you would like to set up";
   }
 
   @override
   String get creator {
-    return 'Creator';
+    return "Creator";
   }
 
   @override
   String get collector {
-    return 'Collector';
+    return "Collector";
   }
 
   @override
   String get brand {
-    return 'Brand';
+    return "Brand";
   }
 
   @override
   String get firstName {
-    return 'FirstName';
+    return "FirstName";
   }
 
   @override
   String get enterFirstName {
-    return 'Enter First Name';
+    return "Enter First Name";
   }
 
   @override
   String get lastName {
-    return 'LastName';
+    return "LastName";
   }
 
   @override
   String get enterLastName {
-    return 'Enter Last Name';
+    return "Enter Last Name";
   }
 
   @override
   String get eMail {
-    return 'E-Mail';
+    return "E-Mail";
   }
 
   @override
   String get enterYourEMail {
-    return 'Enter your E-Mail';
+    return "Enter your E-Mail";
   }
 
   @override
   String get password {
-    return 'Password';
+    return "Password";
   }
 
   @override
   String get enterYourPassword {
-    return 'Enter your Password';
+    return "Enter your Password";
   }
 
   @override
   String get confirmPassword {
-    return 'Confirm Password';
+    return "Confirm Password";
   }
 
   @override
   String get phoneNumber {
-    return 'Phone Number';
+    return "Phone Number";
   }
 
   @override
   String get enterYourPhoneNumber {
-    return 'Enter your Phone Number';
+    return "Enter your Phone Number";
   }
 
   @override
   String get country {
-    return 'Country';
+    return "Country";
   }
 
   @override
   String get enterYourCountry {
-    return 'Enter your Country';
+    return "Enter your Country";
   }
 
   @override
   String get promoCode {
-    return 'Promo Code';
+    return "Promo Code";
   }
 
   @override
   String get uu545645 {
-    return 'UU545645';
+    return "UU545645";
   }
 
   @override
   String get userID {
-    return 'USER ID';
+    return "USER ID";
   }
 
   @override
   String get enterYourUserId {
-    return 'Enter your User id';
+    return "Enter your User id";
   }
 
   @override
   String get createAccount {
-    return 'Create Account';
+    return "Create Account";
   }
 
   @override
   String get _LoginPage {
-    return '';
+    return "";
   }
 
   @override
   String get geoLocatedCreativeEngagements {
-    return 'Geo Located Creative Engagements';
+    return "Geo Located Creative Engagements";
   }
 
   @override
   String get username {
-    return 'Username';
+    return "Username";
   }
 
   @override
   String get saveVerificationForEsayLogin {
-    return 'Save verification for esay login';
+    return "Save verification for esay login";
   }
 
   @override
   String get loginToYourAccountOrSignup {
-    return 'Log-in to your account or sign-up';
+    return "Log-in to your account or sign-up";
   }
 
   @override
   String get login {
-    return 'Log-In';
+    return "Log-In";
   }
 
   @override
   String get signup {
-    return 'Sign-Up';
+    return "Sign-Up";
   }
 
   @override
   String get _AppMenu {
-    return '';
+    return "";
   }
 
   @override
   String get about {
-    return 'About';
+    return "About";
   }
 
   @override
   String get forum {
-    return 'Forum';
+    return "Forum";
   }
 
   @override
   String get contact {
-    return 'Contact';
+    return "Contact";
   }
 
   @override
   String get support {
-    return 'Support';
+    return "Support";
   }
 
   @override
   String get discoverCollectDrop {
-    return 'Discover / Collect / Drop';
+    return "Discover / Collect / Drop";
   }
 
   @override
   String get termsAndConditions {
-    return 'Terms & Conditions';
+    return "Terms & Conditions";
   }
 
   @override
   String get _PaymentProcessing {
-    return '';
+    return "";
   }
 
   @override
   String get processing {
-    return 'Processing';
+    return "Processing";
   }
 
   @override
   String get purchasing {
-    return 'Purchashing';
+    return "Purchashing";
   }
 
   @override
   String get yourPaymentIsProcessing {
-    return 'Your payment is processing...';
+    return "Your payment is processing...";
   }
 
   @override
   String get cancel {
-    return 'Cancel';
+    return "Cancel";
   }
 
   @override
   String get _AppCardTile {
-    return '';
+    return "";
   }
 
   @override
   String get gallery {
-    return 'Gallery';
+    return "Gallery";
   }
 
   @override
   String get updated {
-    return 'Updated';
+    return "Updated";
   }
 
   @override
   String get _CategoryFeedCard {
-    return '';
+    return "";
   }
 
   @override
   String get followers {
-    return 'Followers';
+    return "Followers";
   }
 
   @override
   String get seeCreation {
-    return 'See Creation';
+    return "See Creation";
   }
 
   @override
   String get follow {
-    return 'follow';
+    return "follow";
   }
 
   @override
   String get _CheckoutCard {
-    return '';
+    return "";
   }
 
   @override
   String get checkout {
-    return 'Checkout';
+    return "Checkout";
   }
 
   @override
   String get maticSent {
-    return 'MATIC sent';
+    return "MATIC sent";
   }
 
   @override
   String get yourBalance {
-    return 'Your Balance';
+    return "Your Balance";
   }
 
   @override
   String get serviceFee {
-    return 'Service fee';
+    return "Service fee";
   }
 
   @override
   String get youWillPay {
-    return 'You will pay';
+    return "You will pay";
   }
 
   @override
   String get eth {
-    return 'ETH';
+    return "ETH";
   }
 
   @override
   String get checkOut {
-    return 'Check out';
+    return "Check out";
   }
 
   @override
   String get _DropFeedCard {
-    return '';
+    return "";
   }
 
   @override
   String get geoPointSprint {
-    return 'Geo-Point Sprint';
+    return "Geo-Point Sprint";
   }
 
   @override
   String get _PaymentSuccessPop {
-    return '';
+    return "";
   }
 
   @override
   String get paymentSuccessful {
-    return 'Payment Successful';
+    return "Payment Successful";
   }
 
   @override
   String get yourPaymentWasSuccess {
-    return 'Your payment was success';
+    return "Your payment was success";
   }
 
   @override
   String get paymentID {
-    return 'Payment ID';
+    return "Payment ID";
   }
 
   @override
   String get backToHome {
-    return 'Back to home';
+    return "Back to home";
   }
 
   @override
   String get _RecentActivityCard {
-    return '';
+    return "";
   }
 
   @override
   String get collectedFrom {
-    return 'Collected From';
+    return "Collected From";
   }
 
   @override
   String get purchasedFor {
-    return 'Purchased for';
+    return "Purchased for";
   }
 
   @override
   String get _UserFeedCard {
-    return '';
+    return "";
   }
 
   @override
   String get soldFor {
-    return 'Sold For';
+    return "Sold For";
   }
 
   @override
   String get matic {
-    return 'MATIC';
+    return "MATIC";
   }
 }

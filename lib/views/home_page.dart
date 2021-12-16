@@ -1,9 +1,14 @@
-import 'package:infinet/views/widgets/app_check_box.dart';
-import 'package:infinet/views/widgets/avatar_name.dart';
-import 'package:infinet/views/widgets/chain.dart';
+import 'package:infinet/views/widgets/Latest_drop_swipe.dart';
+import 'package:infinet/views/widgets/app_card_tile.dart';
+import 'package:infinet/views/widgets/footer.dart';
+import 'package:infinet/views/widgets/profile_collection.dart';
+import 'package:infinet/views/widgets/select_date.dart';
+
 
 import '../ui.dart';
-import 'widgets/user_feed_card.dart';
+import 'widgets/add_tag_module.dart';
+import 'widgets/app_category_tile.dart';
+import 'widgets/profile_contact_popup.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, this.title}) : super(key: key);
@@ -17,17 +22,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> with AppProviderMixin<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return AppScaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text(widget.title ?? ''),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-
-          children: const <Widget>[UserFeedCard()],
-        ),
+      body: const Center(
+        child: Footer(),
       ),
     );
   }
