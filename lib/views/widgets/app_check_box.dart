@@ -46,18 +46,16 @@ class _AppRoundedCheckBoxState extends State<AppRoundedCheckBox> {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        ClipRRect(
-          borderRadius: BorderRadius.circular(8),
-          child: Checkbox(
-            fillColor:checkBox==false?MaterialStateProperty.all(Colors.white):null,
-            value: checkBox,
-            activeColor: Colors.deepPurple,
+        Checkbox(
+          fillColor:checkBox==false?MaterialStateProperty.all(Colors.white):null,
+          value: checkBox,
+          activeColor: Colors.deepPurple,
+          shape: CircleBorder(),
 
-            onChanged: (bool? value) {
-              checkBox = value!;
-              setState(() {});
-            },
-          ),
+          onChanged: (bool? value) {
+            checkBox = value!;
+            setState(() {});
+          },
         ),
         widget.text
       ],
