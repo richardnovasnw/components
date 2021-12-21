@@ -20,10 +20,10 @@ class AppLocalizations {
     GlobalCupertinoLocalizations.delegate,
   ];
 
-  static const AppStringsDelegate delegate = AppStringsDelegate();
+  static const AppStringsDelegate delegate = AppStringsDelegate.delegate;
 
-  static AppStrings? of(BuildContext context) =>
-      Localizations.of<AppStrings>(context, AppStrings);
+  static AppStrings of(BuildContext context) =>
+      Localizations.of<AppStrings>(context, AppStrings)!;
 
   static Future<AppStrings> load(Locale locale) {
     final String name = (locale.countryCode?.isEmpty ?? false)
@@ -39,7 +39,7 @@ class AppLocalizations {
   }
 }
 
-class AppStringsDelegate extends LocalizationsDelegate<AppStrings?> {
+class AppStringsDelegate extends LocalizationsDelegate<AppStrings> {
   const AppStringsDelegate();
 
   List<Locale> get supportedLocales => appSupportedLocales;
@@ -58,8 +58,8 @@ class AppStringsDelegate extends LocalizationsDelegate<AppStrings?> {
 
   static const List<Locale> appSupportedLocales = <Locale>[english];
 
-  static AppStrings? of(BuildContext context) {
-    return Localizations.of<AppStrings>(context, AppStrings);
+  static AppStrings of(BuildContext context) {
+    return Localizations.of<AppStrings>(context, AppStrings)!;
   }
 
   @override
@@ -71,13 +71,15 @@ class AppStringsDelegate extends LocalizationsDelegate<AppStrings?> {
   }
 
   @override
-  Future<AppStrings?> load(Locale locale) {
+  Future<AppStrings> load(Locale locale) {
     AppStrings? strings;
     if (locale.languageCode == 'en') {
       strings = AppStringsEN();
     }
 
-    return SynchronousFuture<AppStrings?>(strings);
+    strings ??= AppStringsEN();
+
+    return SynchronousFuture<AppStrings>(strings);
   }
 
   @override

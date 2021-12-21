@@ -1,7 +1,7 @@
 import '../../ui.dart';
 
-class CatagoryFeedCard extends StatelessWidget {
-  const CatagoryFeedCard({Key? key}) : super(key: key);
+class CategoryFeedCard extends StatelessWidget {
+  const CategoryFeedCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,26 +49,20 @@ class CatagoryFeedCard extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           RichText(
-                            text: const TextSpan(
+                            text: TextSpan(
                                 text: '2024',
-                                style: TextStyle(fontSize: 36),
+                                style: const TextStyle(fontSize: 36),
                                 children: <InlineSpan>[
                                   TextSpan(
-                                    text: ' Followers',
-                                    style: TextStyle(fontSize: 16),
+                                    text: ' ${context.strings.followers}',
+                                    style: const TextStyle(fontSize: 16),
                                   ),
                                 ]),
                           ),
-                          ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8)),
-                                fixedSize: const Size(108, 40),
-                                primary: Colors.transparent,
-                                side: const BorderSide(color: Colors.white),
-                              ),
+                          RageOutlinedButton(
+                             
                               onPressed: () {},
-                              child: const Text('follow'))
+                              child: Text(context.strings.follow))
                         ],
                       )
                     ],
@@ -86,10 +80,10 @@ class CatagoryFeedCard extends StatelessWidget {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(51)),
-                child: const Center(
+                child: Center(
                   child: Text(
-                    'See Creation',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    context.strings.seeCreation,
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
               ))
