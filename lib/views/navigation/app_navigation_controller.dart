@@ -1,5 +1,4 @@
 import 'package:infinet/views/auth/login.dart';
-
 import '../../core/navigation/navigation.dart';
 import '../../ui.dart';
 import '../home_page.dart';
@@ -29,6 +28,7 @@ class AppNavigationController extends AppFlowController<AppNavigationState> {
       if (state.value == null)
         const MaterialPage<Object>(
           child: LoginPage(),
+
         ),
     ];
   }

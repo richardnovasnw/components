@@ -5,6 +5,7 @@ import 'package:infinet/views/widgets/app_outline_button.dart';
 import 'package:infinet/views/widgets/app_textformfield.dart';
 import 'package:infinet/views/widgets/form_tile.dart';
 
+
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
 
@@ -19,10 +20,12 @@ class SignUp extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
+
+              children:  <Widget> [
                 Row(
-                  children:  <Widget>[
-                    const AppLogoHorizontal(),
+                  children: const <Widget>  [
+                    AppLogoHorizontal(),
+
                     Expanded(
                         child: Text(
                       context.strings.selectWhichTypeOfAccount,
@@ -31,7 +34,8 @@ class SignUp extends StatelessWidget {
                   ],
                 ),
                 Row(
-                  children:  <Widget>[
+
+                  children:  const <Widget>[
                     CheckBoxText(
                       text: context.strings.creator,
                     ),
@@ -44,7 +48,7 @@ class SignUp extends StatelessWidget {
                   ],
                 ),
                 Row(
-                  children:  <Widget>[
+                  children: const <Widget> [
                     Expanded(
                       child: FormTile(
                         title: context.strings.firstName,
@@ -68,24 +72,28 @@ class SignUp extends StatelessWidget {
                 ),
                  FormTile(
                   title: context.strings.eMail,
+
                   textField: AppTextFormField(
                     hintText: context.strings.enterYourEMail,
                   ),
                 ),
                  FormTile(
                   title: context.strings.password,
+
                   textField: AppTextFormField(
                     hintText: context.strings.enterYourPassword,
                   ),
                 ),
                  FormTile(
                   title: context.strings.confirmPassword,
+
                   textField: AppTextFormField(
                     hintText: context.strings.enterYourPassword,
                   ),
                 ),
                 Row(
-                  children:  <Widget>[
+
+                  children: const <Widget>[
                     Expanded(
                       child: FormTile(
                         title: context.strings.phoneNumber,
@@ -109,6 +117,7 @@ class SignUp extends StatelessWidget {
                 ),
                 Row(
                   children:  <Widget>[
+
                     Expanded(
                       child: FormTile(
                         title: context.strings.promoCode,
@@ -157,6 +166,7 @@ class SignUp extends StatelessWidget {
                         context.strings.checkOut,
                         style: const TextStyle(color: Colors.white),
                       )),
+
                 )
               ],
             ),
@@ -181,6 +191,7 @@ class CheckBoxText extends StatelessWidget {
         text,
         style: TextStyle(
             color: colors.secondary, fontSize: 18, fontWeight: FontWeight.bold),
+
       ),
     );
   }

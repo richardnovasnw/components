@@ -59,6 +59,7 @@ class _AppRoundedCheckBoxState extends State<AppRoundedCheckBox> {
             setState(() {});
           },
           ),
+
         widget.text
       ],
     );
