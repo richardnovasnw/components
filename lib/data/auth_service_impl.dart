@@ -41,7 +41,7 @@ class AuthServiceImpl implements AuthService{
         }
         final Map<String, dynamic> data = doc.data();
         final results= Users.fromJson(data);
-        print(results);
+        print('users $results');
         return results;
       }).toBuiltList();
     }
@@ -68,13 +68,15 @@ class AuthServiceImpl implements AuthService{
         final DocumentReference<Map<String, dynamic>> ref =
         FirebaseFirestore.instance.collection('register').doc();
         ref.set(<String, dynamic>{
-          'datetime': FieldValue.serverTimestamp(),
+          'datetime':DateTime.now(),
           'username': userName,
+          'email':email,
+          'password':password,
           'uid': FirebaseAuth.instance.currentUser!.uid,
         });
       }).then((Object? value) {
         if (FirebaseAuth.instance.userChanges() != null) {
-          print(value);
+          print(' value $value');
         }
       });
     } catch (e) {

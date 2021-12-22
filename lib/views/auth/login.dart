@@ -62,7 +62,7 @@ class LoginPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: RagePrimaryButton(onPressed: (){
-                      context.appViewModel.signIn(email: 'shra131295@gmail.com', password: '12345678');
+                      context.appViewModel.signIn(email: 'xyz@gmail.com', password: '12345678');
                     }, child: Text('Log-In')),
 
                   ),
