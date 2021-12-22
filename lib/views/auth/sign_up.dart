@@ -1,12 +1,9 @@
 import 'package:infinet/ui.dart';
-import 'package:infinet/views/auth/brand_verification.dart';
 import 'package:infinet/views/widgets/app_check_box.dart';
 import 'package:infinet/views/widgets/app_logo.dart';
 import 'package:infinet/views/widgets/app_outline_button.dart';
 import 'package:infinet/views/widgets/app_textformfield.dart';
 import 'package:infinet/views/widgets/form_tile.dart';
-import 'package:infinet/views/widgets/rage_primary_button.dart';
-
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -22,112 +19,112 @@ class SignUp extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:  <Widget> [
+              children: <Widget>[
                 Row(
-                  children: const <Widget>  [
-                    AppLogoHorizontal(),
+                  children:  <Widget>[
+                    const AppLogoHorizontal(),
                     Expanded(
                         child: Text(
-                      'Select which type of account you would like to set up',
-                      style: TextStyle(color: Colors.white),
+                      context.strings.selectWhichTypeOfAccount,
+                      style: TextStyle(color: colors.secondary),
                     ))
                   ],
                 ),
                 Row(
-                  children:  const <Widget>[
+                  children:  <Widget>[
                     CheckBoxText(
-                      text: 'Creator',
+                      text: context.strings.creator,
                     ),
                     CheckBoxText(
-                      text: 'Collector',
+                      text: context.strings.collector,
                     ),
                     CheckBoxText(
-                      text: 'Brand',
+                      text: context.strings.brand,
                     ),
                   ],
                 ),
                 Row(
-                  children: const <Widget> [
+                  children:  <Widget>[
                     Expanded(
                       child: FormTile(
-                        title: 'FirstName',
+                        title: context.strings.firstName,
                         textField: AppTextFormField(
-                          hintText: 'Enter First Name',
+                          hintText: context.strings.enterFirstName,
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 8,
                     ),
                     Expanded(
                       child: FormTile(
-                        title: 'LastName',
+                        title: context.strings.lastName,
                         textField: AppTextFormField(
-                          hintText: 'Enter Last Name',
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const FormTile(
-                  title: 'E-Mail',
-                  textField: AppTextFormField(
-                    hintText: 'Enter your E-Mail',
-                  ),
-                ),
-                const FormTile(
-                  title: 'Password',
-                  textField: AppTextFormField(
-                    hintText: 'Enter your Password',
-                  ),
-                ),
-                const FormTile(
-                  title: 'Confirm Password',
-                  textField: AppTextFormField(
-                    hintText: 'Enter your password',
-                  ),
-                ),
-                Row(
-                  children: const <Widget>[
-                    Expanded(
-                      child: FormTile(
-                        title: 'Phone Number',
-                        textField: AppTextFormField(
-                          hintText: 'Enter your Phone Number',
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Expanded(
-                      child: FormTile(
-                        title: 'Country',
-                        textField: AppTextFormField(
-                          hintText: 'Enter your Country',
+                          hintText: context.strings.enterLastName,
                         ),
                       ),
                     ),
                   ],
                 ),
+                 FormTile(
+                  title: context.strings.eMail,
+                  textField: AppTextFormField(
+                    hintText: context.strings.enterYourEMail,
+                  ),
+                ),
+                 FormTile(
+                  title: context.strings.password,
+                  textField: AppTextFormField(
+                    hintText: context.strings.enterYourPassword,
+                  ),
+                ),
+                 FormTile(
+                  title: context.strings.confirmPassword,
+                  textField: AppTextFormField(
+                    hintText: context.strings.enterYourPassword,
+                  ),
+                ),
                 Row(
-                  children: const <Widget>[
+                  children:  <Widget>[
                     Expanded(
                       child: FormTile(
-                        title: 'Promo Code',
+                        title: context.strings.phoneNumber,
                         textField: AppTextFormField(
-                          hintText: 'Enter your Promo Code',
+                          hintText: context.strings.enterYourPhoneNumber,
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 8,
                     ),
                     Expanded(
                       child: FormTile(
-                        title: 'USER ID',
+                        title: context.strings.country,
                         textField: AppTextFormField(
-                          hintText: 'Enter your User id',
+                          hintText: context.strings.enterYourCountry,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children:  <Widget>[
+                    Expanded(
+                      child: FormTile(
+                        title: context.strings.promoCode,
+                        textField: AppTextFormField(
+                          hintText: context.strings.uu545645,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    Expanded(
+                      child: FormTile(
+                        title: context.strings.userID,
+                        textField: AppTextFormField(
+                          hintText: context.strings.enterYourUserId,
                         ),
                       ),
                     ),
@@ -135,29 +132,32 @@ class SignUp extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-
-                  child: AppOutlineButton(onPressed: (){
-                    context.appViewModel.signUp(userName: 'xyz', email: 'xyz@gmail.com', password: '12345678');
-                    //  showModalBottomSheet<void>(
-                    //    context: context,
-                    //   enableDrag: true,
-                    //   isScrollControlled: true,
-                    //   backgroundColor: Colors.black.withOpacity(0.5),
-                    //   shape: const RoundedRectangleBorder(
-                    //     borderRadius: BorderRadius.vertical(
-                    //       top: Radius.circular(24),
-                    //     ),
-                    //   ),
-                    //   builder: (BuildContext context) {
-                    //     return BrandVerification();
-                    //   },
-                    // );
-                  }, child: Text('Create Account',style: TextStyle(color: Colors.white
-
-                  ),)),
+                  child: AppOutlineButton(
+                      onPressed: () {
+                        context.appViewModel.signUp(
+                            userName: 'xyz',
+                            email: 'xyz@gmail.com',
+                            password: '12345678');
+                        //  showModalBottomSheet<void>(
+                        //    context: context,
+                        //   enableDrag: true,
+                        //   isScrollControlled: true,
+                        //   backgroundColor: Colors.black.withOpacity(0.5),
+                        //   shape: const RoundedRectangleBorder(
+                        //     borderRadius: BorderRadius.vertical(
+                        //       top: Radius.circular(24),
+                        //     ),
+                        //   ),
+                        //   builder: (BuildContext context) {
+                        //     return BrandVerification();
+                        //   },
+                        // );
+                      },
+                      child: Text(
+                        context.strings.checkOut,
+                        style: const TextStyle(color: Colors.white),
+                      )),
                 )
-
-
               ],
             ),
           ),
@@ -179,8 +179,8 @@ class CheckBoxText extends StatelessWidget {
     return AppCheckBox(
       text: Text(
         text,
-        style: const TextStyle(
-            color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+        style: TextStyle(
+            color: colors.secondary, fontSize: 18, fontWeight: FontWeight.bold),
       ),
     );
   }
