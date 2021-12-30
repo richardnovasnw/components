@@ -6,6 +6,7 @@ import 'package:infinet/views/widgets/select_date.dart';
 
 
 import '../ui.dart';
+import 'auth/sign_up.dart';
 import 'widgets/add_tag_module.dart';
 import 'widgets/app_category_tile.dart';
 import 'widgets/profile_contact_popup.dart';
@@ -28,7 +29,7 @@ class _HomePageState extends State<HomePage> with AppProviderMixin<HomePage> {
         title: Text(widget.title ?? ''),
       ),
       body: const Center(
-        child: Footer(),
+        child: SignUp(),
       ),
     );
   }

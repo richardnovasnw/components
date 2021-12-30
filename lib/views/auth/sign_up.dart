@@ -23,7 +23,7 @@ class SignUp extends StatelessWidget {
 
               children:  <Widget> [
                 Row(
-                  children: const <Widget>  [
+                  children:  <Widget>  [
                     AppLogoHorizontal(),
 
                     Expanded(
@@ -35,7 +35,7 @@ class SignUp extends StatelessWidget {
                 ),
                 Row(
 
-                  children:  const <Widget>[
+                  children:   <Widget>[
                     CheckBoxText(
                       text: context.strings.creator,
                     ),
@@ -48,7 +48,7 @@ class SignUp extends StatelessWidget {
                   ],
                 ),
                 Row(
-                  children: const <Widget> [
+                  children:  <Widget> [
                     Expanded(
                       child: FormTile(
                         title: context.strings.firstName,
@@ -93,7 +93,7 @@ class SignUp extends StatelessWidget {
                 ),
                 Row(
 
-                  children: const <Widget>[
+                  children:  <Widget>[
                     Expanded(
                       child: FormTile(
                         title: context.strings.phoneNumber,
