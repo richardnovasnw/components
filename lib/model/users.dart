@@ -1,16 +1,16 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:infinet/model/serializers.dart';
+import 'serializers.dart';
 
 part 'users.g.dart';
 
 abstract class Users implements Built<Users, UsersBuilder> {
-  Users._();
   factory Users([void Function(UsersBuilder) updates]) = _$Users;
+  Users._();
 
   Map<String, dynamic>? toJson() {
-    return serializers.serializeWith(Users.serializer, this)
-    as Map<String, dynamic>;
+    return serializers.serializeWith(Users.serializer, this)!
+        as Map<String, dynamic>;
   }
 
   static Users? fromJson(Map<String, dynamic> json) {
@@ -23,4 +23,3 @@ abstract class Users implements Built<Users, UsersBuilder> {
 
   static Serializer<Users> get serializer => _$usersSerializer;
 }
-
